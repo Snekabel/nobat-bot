@@ -1,0 +1,13 @@
+[Unit]
+Description=Nobat bot
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/home/erik/NoBat/run.sh
+User=erik
+WorkingDirectory=/home/erik/NoBat
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

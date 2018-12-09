@@ -1,0 +1,119 @@
+{
+  "trigger": "!",
+  "mysql": {
+    "host": "127.0.0.1",
+    "user": "nobat",
+    "password": "nobat",
+    "database": "nobat"
+  },
+  "servers": [
+    {
+      "protocol": "IRC",
+      "hostname": "irc.oftc.net",
+      "port": 6667,
+      "nick": "abc",
+      "channels": [
+        "#abc"
+      ]
+    },
+    {
+      "protocol": "MUMBLE",
+      "hostname": "abc",
+      "port": 64738,
+      "nick": "abc",
+      "channel": "abc",
+      "tokens": [
+        "abc!"
+      ],
+      "ignoreUsers": []
+    },
+    {
+      "protocol": "DISCORD",
+      "token": "",
+      "hostname": "Doesn't matter",
+      "nick": "abc",
+      "channelObj": {
+        "name": "abc",
+        "id": "465218127421112325"
+      },
+      "disabledPlugins": [{
+        "channel": "abc",
+        "plugins": [
+          "PLUGIN_WEB_TITLE"
+        ]
+      }],
+      "ignoreUsers": []
+    },
+    {
+      "protocol": "HANGOUTS",
+      "cookies": [
+        "NID=",
+        "SID=",
+        "HSID=",
+        "SSID=",
+        "APISID=",
+        "SAPISID="
+      ],
+      "hostname": "Doesn't matter",
+      "gaia_id": "This bots ID",
+      "channelObj": {
+        "name": "abc",
+        "id": "channel id"
+      }
+    }
+  ],
+  "crosstalks": [
+    {
+      "from": {
+          "protocol": "MUMBLE",
+          "hostname": "abc",
+          "channel": "abc"
+      },
+      "to": {
+          "protocol": "DISCORD",
+          "hostname": "abc",
+          "channel": "abc",
+          "prepend": "MUMBLE: "
+      }
+    },
+    {
+      "from": {
+          "protocol": "MUMBLE",
+          "hostname": "abc",
+          "channel": "abc"
+      },
+      "to": {
+          "protocol": "HANGOUTS",
+          "hostname": "abc",
+          "channel": "abc",
+          "prepend": "MUMBLE: "
+      }
+    },
+    {
+      "from": {
+          "protocol": "DISCORD",
+          "hostname": "abc",
+          "channel": "abc"
+      },
+      "to": {
+          "protocol": "MUMBLE",
+          "hostname": "abc",
+          "channel": "abc",
+          "prepend": "DISCORD: "
+      }
+    },
+    {
+      "from": {
+          "protocol": "DISCORD",
+          "hostname": "abc",
+          "channel": "abc"
+      },
+      "to": {
+          "protocol": "HANGOUTS",
+          "hostname": "abc",
+          "channel": "abc",
+          "prepend": "DISCORD: "
+      }
+    }
+]
+}

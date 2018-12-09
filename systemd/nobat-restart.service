@@ -1,0 +1,9 @@
+[Unit]
+Description=Restart nobat bot
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "/bin/systemctl stop nobat.service && sleep 10 && /usr/bin/mysql -u nobat -pnobat -D nobat -e 'TRUNCATE links_short' && /bin/systemctl start nobat.service"
+#User=erik
+WorkingDirectory=/home/erik/NoBat
+

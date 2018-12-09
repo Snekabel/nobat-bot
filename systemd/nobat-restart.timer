@@ -1,0 +1,9 @@
+[Unit]
+Description=Restart Nobat daily
+
+[Timer]
+OnCalendar=*-*-* 15:00:00
+Persistent=false
+
+[Install]
+WantedBy=timers.target
